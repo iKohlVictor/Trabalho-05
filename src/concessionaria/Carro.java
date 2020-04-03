@@ -5,7 +5,7 @@ public class Carro extends Automovel
     private boolean completoOuBasico;
     //Construtor Padrão
     public Carro(boolean completoOuBasico, String nome, 
-            String fabricante, double potencia) 
+            String fabricante, double potencia, String cod) 
     {
         super(nome, fabricante, potencia);
         this.completoOuBasico = completoOuBasico;

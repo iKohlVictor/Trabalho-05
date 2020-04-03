@@ -18,10 +18,9 @@ public class Automovel
     {
         return(quantidadeDeAutomoveis);
     }
-    public String Turbinar()
+    public void Turbinar()
     {
-        potencia = potencia * 0.119;
-        return("Turbinando = " + potencia);
+        this.potencia = this.potencia * 1.119;
     }
     //Construtor de Inicialização
     public Automovel()

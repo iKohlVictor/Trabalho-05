@@ -5,7 +5,7 @@ public class Caminhao extends Automovel
     //Construtor Padrão
 
     public Caminhao(float pesoSuportado, String nome, 
-            String fabricante, double potencia) 
+            String fabricante, double potencia, String cod) 
     {
         super(nome, fabricante, potencia);
         this.pesoSuportado = pesoSuportado;

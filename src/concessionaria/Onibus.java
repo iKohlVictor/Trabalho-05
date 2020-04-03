@@ -5,7 +5,7 @@ public class Onibus extends Automovel
     private boolean banheiro;
     //Construtor Padrão
     public Onibus(int quantidadeDeLugares, boolean banheiro, String nome, 
-            String fabricante, double potencia) 
+            String fabricante, double potencia, String cod) 
     {
         super(nome, fabricante, potencia);
         this.quantidadeDeLugares = quantidadeDeLugares;
@@ -45,5 +45,10 @@ public class Onibus extends Automovel
     {
         return (super.toString() + ", quantidadeDeLugares = " + quantidadeDeLugares 
                 + ", banheiro = " + banheiro);
+    }
+    @Override
+    public void Turbinar()
+    {
+        super.setPotencia(super.getPotencia() * 1.247);
     }
 }
