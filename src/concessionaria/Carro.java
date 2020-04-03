@@ -32,7 +32,15 @@ public class Carro extends Automovel
     @Override
     public String toString() 
     {
-        return (super.toString() + "completoOuBasico=" + completoOuBasico);
+        if(this.completoOuBasico)
+        {
+            return (super.toString() + "completoOuBasico = Carro Completo");
+        }
+        else
+        {
+            return (super.toString() + "completoOuBasico = Carro Basico");
+        }
+        
     }
     
     

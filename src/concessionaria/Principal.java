@@ -58,88 +58,98 @@ public class Principal
                 break;
                 //--------------------------------------------------------------
                 case 1:
-                    System.out.print("\n --Inserindo um objeto qualquer--");
-                    while(opc3)
+                    System.out.print("\n\n --- Menu De Inseção ---");
+                    System.out.print("\n 1 - Caminhao..........:");
+                    System.out.print("\n 2 - Onibus............:");
+                    System.out.print("\n 3 - Carro.............:\n -> ");
+                    opc2 = entrada.nextInt();
+                    //validação.
+                    while(opc2 < 1 || opc2 > 3)
                     {
-                        System.out.print("--Menu De Inserção--");
-                        System.out.print("\n 0 - Sair.....:");
-                        System.out.print("\n 1 - Onibus...:");
-                        System.out.print("\n 2 - Carro....:");
-                        System.out.print("\n 3 - Caminhao.:\n ->");
-                        opc2 = entrada.nextInt();
-                        //validação.
-                        while(opc2 < 0 || opc2 > 3)
-                        {
-                            System.out.print("\n\n Valor errado... Digite outro..:");
-                            opc2 = entrada.nextInt();
-                        }
-                        //Inserção...
-                        if(opc2 == 0)
-                            System.out.print("\n\n Voltando ao Menu Inicial \n\n");
-                        //------------------------------------------------------
-                        if(opc2 == 1)
-                        {
-                            //Inicializando o Objeto
-                            onibus = new Onibus();
-                            //Recebendo dados..
-                            System.out.print("\n --Inserindo um Onibus");
-                            System.out.print("\n\n Digite o nome......:");
-                            onibus.setNome(entrada.next());
-                            System.out.print("\n Digite o Fabricante..:");
-                            onibus.setFabricante(entrada.next());
-                            System.out.print("\n Digite a potência....:");
-                            onibus.setPotencia(entrada.nextDouble());
-                            System.out.print("\n Digite quantidade de lugares..:");
-                            onibus.setQuantidadeDeLugares(entrada.nextInt());
-                            System.out.println("\n Com ou sem Banheiro.........:");
-                            onibus.setBanheiro(entrada.nextBoolean());
-                            //Colocando no ArrayList.
-                            listaDeAutomoveis.add(onibus);
-                        }
-                        //------------------------------------------------------
-                        if(opc2 == 2)
-                        {
-                            //Inicializando o Objeto
-                            carro = new Carro();
-                            //Recebendo dados..
-                            System.out.print("\n --Inserindo um Carro");
-                            System.out.print("\n\n Digite o nome......:");
-                            carro.setNome(entrada.next());
-                            System.out.print("\n Digite o Fabricante..:");
-                            carro.setFabricante(entrada.next());
-                            System.out.print("\n Digite a potência....:");
-                            carro.setPotencia(entrada.nextDouble());
-                            System.out.print("\n Completo ou Básico..:");
-                            carro.setCompletoOuBasico(entrada.nextBoolean());
-                            //Colocando no ArrayList
-                            listaDeAutomoveis.add(carro);
-                        }
-                        //------------------------------------------------------
-                        if(opc2 == 3)
-                        {
-                            //Inicializando o Objeto
-                            caminhao = new Caminhao();
-                            //Recebendo Dados.
-                            System.out.print("\n --Inserindo um Caminhao");
-                            System.out.print("\n\n Digite o nome......:");
-                            caminhao.setNome(entrada.next());
-                            System.out.print("\n Digite o Fabricante..:");
-                            caminhao.setFabricante(entrada.next());
-                            System.out.print("\n Digite a potência....:");
-                            caminhao.setPotencia(entrada.nextDouble());
-                            System.out.print("\n Peso suportado pelo caminhao.:");
-                            caminhao.setPesoSuportado(entrada.nextFloat());
-                            //Colocando no ArrayList
-                            listaDeAutomoveis.add(caminhao);
-                        }
+                         System.out.print("\n\n Valor errado... Digite outro..:");
+                         opc2 = entrada.nextInt();
+                    }
+                    //------------------------------------------------------
+                    if(opc2 == 1)
+                    {
+                        //Inicializando o Objeto
+                        caminhao = new Caminhao();
+                        //Recebendo Dados.
+                        System.out.print("\n --Inserindo um Caminhao");
+                        System.out.print("\n Nome............:");
+                        caminhao.setNome(entrada.next());
+                        System.out.print("\n Fabricante......:");
+                        caminhao.setFabricante(entrada.next());
+                        System.out.print("\n Potência........:");
+                        caminhao.setPotencia(entrada.nextDouble());
+                        System.out.print("\n Peso Suportado..:");
+                        caminhao.setPesoSuportado(entrada.nextFloat());
+                        //Colocando no ArrayList
+                        listaDeAutomoveis.add(caminhao);  
+                    }
+                    //------------------------------------------------------
+                    if(opc2 == 2)
+                    {
+                        //Inicializando o Objeto
+                        onibus = new Onibus();
+                        //Recebendo dados..
+                        System.out.print("\n --Inserindo um Onibus");
+                        System.out.print("\n Nome............:");
+                        onibus.setNome(entrada.next());
+                        System.out.print("\n Fabricante......:");
+                        onibus.setFabricante(entrada.next());
+                        System.out.print("\n Potência........:");
+                        onibus.setPotencia(entrada.nextDouble());
+                        System.out.print("\n Qtde Lugares....:");
+                        onibus.setQuantidadeDeLugares(entrada.nextInt());
+                        System.out.print("\n Banheiro........:");
+                        onibus.setBanheiro(entrada.nextBoolean());
+                        //Colocando no ArrayList.
+                        listaDeAutomoveis.add(onibus);
+                    }
+                    //------------------------------------------------------
+                    if(opc2 == 3)
+                    {
+                    //Inicializando o Objeto
+                        carro = new Carro();
+                        //Recebendo dados..
+                        System.out.print("\n --Inserindo um Carro");
+                        System.out.print("\n Nome..............:");
+                        carro.setNome(entrada.next());
+                        System.out.print("\n Fabricante........:");
+                        carro.setFabricante(entrada.next());
+                        System.out.print("\n Potência..........:");
+                        carro.setPotencia(entrada.nextDouble());
+                        System.out.print("\n Completo..........:");
+                        carro.setCompletoOuBasico(entrada.nextBoolean());
+                        //Colocando no ArrayList
+                        listaDeAutomoveis.add(carro);
                     }
                 break;
                 //--------------------------------------------------------------
                 case 2:
-                    System.out.print("\n --- Menu De Inseção ---");
-                    System.out.print("\n 1 - Caminhao.");
-                    System.out.print("\n 2 - Onibus.");
-                    System.out.print("\n 3 - Carro\n -> ");
+                    //Inserindo em uma posição especifica...
+                    System.out.print("\n Posição de Inserção.....:");
+                    localizacao = entrada.nextInt();
+                    //Validação..
+                    cont = 0;
+                    for(int i = 0; i<listaDeAutomoveis.size(); i++)
+                    {
+                        cont = cont + 1;
+                    }
+                    if(localizacao < cont)
+                    {
+                        while(localizacao < cont || localizacao < 0)
+                        {
+                            System.out.print("\n Digite outra posição..:");
+                            localizacao = entrada.nextInt();
+                        }
+                    }
+                    //Escolhendo qual objeto vai ser inserido
+                    System.out.print("\n\n --- Menu De Inseção ---");
+                    System.out.print("\n 1 - Caminhao..........:");
+                    System.out.print("\n 2 - Onibus............:");
+                    System.out.print("\n 3 - Carro.............:\n -> ");
                     opc2 = entrada.nextInt();
                     //Validação..
                     while(opc2 < 1 || opc2 > 3)
@@ -150,51 +160,45 @@ public class Principal
                     if(opc2 == 1)
                     {
                         caminhao = new Caminhao();
-                        System.out.print("\n Nome:");
+                        System.out.print("\n Nome............:");
                         caminhao.setNome(entrada.next());
-                        System.out.print("\n Fabricante:");
+                        System.out.print("\n Fabricante......:");
                         caminhao.setFabricante(entrada.next());
-                        System.out.print("\n Potência:");
+                        System.out.print("\n Potência........:");
                         caminhao.setPotencia(entrada.nextDouble());
-                        System.out.print("\n Peso Suportado:");
+                        System.out.print("\n Peso Suportado..:");
                         caminhao.setPesoSuportado(entrada.nextFloat());
-                        System.out.println("\n Posição de Inserção:");
-                        localizacao = entrada.nextInt();
-                        //Validação..
+                        //Inserção no ArrayList
                         listaDeAutomoveis.add(localizacao,caminhao);
                     }
                     if(opc2 == 2)
                     {
                         onibus = new Onibus();
-                        System.out.print("\n Nome:");
+                        System.out.print("\n Nome............:");
                         onibus.setNome(entrada.next());
-                        System.out.print("\n Fabricante:");
+                        System.out.print("\n Fabricante......:");
                         onibus.setFabricante(entrada.next());
-                        System.out.print("\n Potência:");
+                        System.out.print("\n Potência........:");
                         onibus.setPotencia(entrada.nextDouble());
-                        System.out.print("\n Qtde Lugares:");
+                        System.out.print("\n Qtde Lugares....:");
                         onibus.setQuantidadeDeLugares(entrada.nextInt());
-                        System.out.print("\n Banheiro:");
+                        System.out.print("\n Banheiro........:");
                         onibus.setBanheiro(entrada.nextBoolean());
-                        System.out.println("\n Posição de Inserção:");
-                        localizacao = entrada.nextInt();
-                        //Validação..
+                        //Inserção no ArrayList
                         listaDeAutomoveis.add(localizacao,onibus);
                     }
                     if(opc2 == 3)
                     {
                         carro = new Carro();
-                        System.out.print("\n Nome:");
+                        System.out.print("\n Nome..............:");
                         carro.setNome(entrada.next());
-                        System.out.print("\n Fabricante:");
+                        System.out.print("\n Fabricante........:");
                         carro.setFabricante(entrada.next());
-                        System.out.print("\n Potência:");
+                        System.out.print("\n Potência..........:");
                         carro.setPotencia(entrada.nextDouble());
-                        System.out.print("\n Completo:");
+                        System.out.print("\n Completo..........:");
                         carro.setCompletoOuBasico(entrada.nextBoolean());
-                        System.out.println("\n Posição de Inserção:");
-                        localizacao = entrada.nextInt();
-                        //Validação..
+                        //Inserção no ArrayList
                         listaDeAutomoveis.add(localizacao,carro);
                     }
                 break;
@@ -211,70 +215,95 @@ public class Principal
                 case 4:
                     System.out.print("\n\n\n ---Mostrando Onibus com mais Lugares---");
                     //Encontrando o Onibus desejado.
-                    onibus = new Onibus();
+                    Onibus onibusComMaisLugares = null;
+                    cont = 0;
                     for(int i = 0; i < listaDeAutomoveis.size(); i++)
                     {
                         if(listaDeAutomoveis.get(i) instanceof Onibus)
                         {
-                            onibus = (Onibus)listaDeAutomoveis.get(i);
-                            if(cont == 0)//Primeira vez entrando no laço, passando o primeiro onibus como parametro. 
+                            cont++;
+                            if(cont == 1)//Primeira vez entrando no laço, passando o primeiro onibus como parametro. 
                             {
-                                maiorQuantidadeDeLugares = onibus.getQuantidadeDeLugares();
-                                localizacao = i;
-                                cont = 1;
+                                onibusComMaisLugares = ((Onibus) listaDeAutomoveis.get(i));
                             }
-                            if(maiorQuantidadeDeLugares < onibus.getQuantidadeDeLugares())
-                            {//Verificando qual o onibus como mais lugares.
-                                maiorQuantidadeDeLugares = onibus.getQuantidadeDeLugares();
-                                localizacao = i;
+                            else
+                            {
+                                if(((Onibus)listaDeAutomoveis.get(i)).getQuantidadeDeLugares() 
+                                        > onibusComMaisLugares.getQuantidadeDeLugares())
+                                {//Verificando qual o onibus com mais lugares.
+                                    onibusComMaisLugares = ((Onibus)listaDeAutomoveis.get(i));
+                                    localizacao = i;
+                                }
                             }
-                        }
-                        if(localizacao != -1)//Se encontrou o onibus com mais lugares.
-                        {
-                            System.out.print("\n\n Onibus:" + listaDeAutomoveis.get(localizacao).toString());
-                        }
-                     }
+                        }                        
+                    }
+                    if(localizacao != -1)//Se encontrou o onibus com mais lugares.
+                    {
+                        System.out.print("\n\n Onibus Com Mais Lugares :" + onibusComMaisLugares.toString());
+                    }
                 break;
                 //--------------------------------------------------------------
                 case 5:
-                    System.out.print("\n\n\n ---Mostrando Caminhao com mais Lugares---");
+                    System.out.print("\n\n\n --- Mostrando Caminhao Com Maior Peso Suportado ---");
                     //Encontrando o Onibus desejado.
-                    caminhao = new Caminhao();
+                    Caminhao caminhaoComMaiorPesoSuportadoParaTracionar = null;
+                    cont = 0;
                     for(int i = 0; i < listaDeAutomoveis.size(); i++)
                     {
                         if(listaDeAutomoveis.get(i) instanceof Caminhao)
                         {
-                            caminhao = (Caminhao)listaDeAutomoveis.get(i);
-                            if(cont == 0)//Primeira vez entrando no laço, passando o primeiro caminhao como parametro.
+                            cont++;
+                            if(cont == 1)//Primeira vez entrando no laço, passando o primeiro caminhao como parametro.
                             {
-                                maiorPesoSuportadoParaTracionar = caminhao.getPesoSuportado();
-                                localizacao = i;
-                                cont = 1;
+                                caminhaoComMaiorPesoSuportadoParaTracionar = (Caminhao)listaDeAutomoveis.get(i);
                             }
-                            if(maiorPesoSuportadoParaTracionar < caminhao.getPesoSuportado())
-                            {//Verificando qual o Caminhao suporta maio peso.
-                                maiorPesoSuportadoParaTracionar = caminhao.getPesoSuportado();
-                                localizacao = i;
+                            else
+                            {
+                                if(((Caminhao)listaDeAutomoveis.get(i)).getPesoSuportado() 
+                                        > caminhaoComMaiorPesoSuportadoParaTracionar.getPesoSuportado())
+                                {//Verificando qual o Caminhao suporta maio peso.
+                                    caminhaoComMaiorPesoSuportadoParaTracionar = ((Caminhao)listaDeAutomoveis.get(i));
+                                    localizacao = i;
+                                }
                             }
                         }
-                        if(localizacao != -1)//Se encontrou o caminhao que suporta maior peso.
-                        {
-                            System.out.print("\n\n Caminhao:" + listaDeAutomoveis.get(localizacao).toString());
-                        }
-                     }
+                    }
+                    if(localizacao != -1)//Se encontrou o caminhao que suporta maior peso.
+                    {
+                        System.out.print("\n\n Caminhao:" + caminhaoComMaiorPesoSuportadoParaTracionar.toString());
+                    }
                 break;
                 //--------------------------------------------------------------
                 case 6:
                     System.out.println("\n Posição de remoção");
                     localizacao = entrada.nextInt();
                     //validação..
+                    cont = 0;
+                    for(int i = 0; i<listaDeAutomoveis.size(); i++)
+                    {
+                        cont = cont + 1;
+                    }
+                    while(localizacao > cont || localizacao < 0)
+                    {
+                        System.out.println("Digite outra posição:");
+                        localizacao = entrada.nextInt();
+                    }
+                    //Remoção do ArrayList
                     listaDeAutomoveis.remove(localizacao);
                 break;
                 //--------------------------------------------------------------
                 case 7:
                     //Limpando o ArrayList
-                    System.out.print("\n\n --Limpando o ArrayList--");
-                    listaDeAutomoveis.clear();
+                    //Validação caso já esteja vazio
+                    if(!listaDeAutomoveis.isEmpty())
+                    {
+                        System.out.print("\n\n --Limpando o ArrayList--");
+                        listaDeAutomoveis.clear();
+                    }
+                    else
+                    {
+                        System.out.print("\n ArrayList já está vazio.");
+                    }
                 break;
                 //--------------------------------------------------------------
                 case 8:
@@ -291,8 +320,18 @@ public class Principal
                     System.out.print("\n Digite a posição do Automovel:");
                     localizacao = entrada.nextInt();
                     //validação...
+                    cont = 0;
+                    for(int i = 0; i<listaDeAutomoveis.size(); i++)
+                    {
+                        cont = cont + 1;
+                    }
+                    while(localizacao > cont || localizacao < 0)
+                    {
+                        System.out.println("Digite outra posição:");
+                        localizacao = entrada.nextInt();
+                    }
+                    //Turbinando automovel
                     listaDeAutomoveis.get(localizacao).Turbinar();
-                    //Validação se a possição existe.
                 break;
                 //--------------------------------------------------------------
                 case 10:

@@ -43,8 +43,16 @@ public class Onibus extends Automovel
     @Override
     public String toString() 
     {
-        return (super.toString() + ", quantidadeDeLugares = " + quantidadeDeLugares 
-                + ", banheiro = " + banheiro);
+        if(this.banheiro)
+        {
+            return (super.toString() + ", quantidadeDeLugares = " + quantidadeDeLugares 
+                + ", banheiro = Com banheiro");
+        }
+        else
+        {
+            return (super.toString() + ", quantidadeDeLugares = " + quantidadeDeLugares 
+                + ", banheiro = Sem banheiro");
+        }
     }
     @Override
     public void Turbinar()
